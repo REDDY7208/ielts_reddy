@@ -1,0 +1,67 @@
+.terms-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background-color: #f9f9f9; /* Light background for readability */
+   
+    border-radius: 8px;
+    border: 1.5px solid #000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+ 
+  .terms-title {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+  }
+ 
+  .terms-update-date {
+    font-size: 0.9rem;
+    color: #777;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+ 
+  .terms-section-heading {
+    font-size: 1.8rem;
+    color: blue;
+    margin-top: 25px;
+ 
+    padding-bottom: 5px;
+    font-weight: bold;
+  }
+ 
+  .terms-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+ 
+  .terms-list-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-left: 4px solid #3498db;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+ 
+  .terms-list-item::before {
+    content: "• ";
+    color: #3498db;
+    font-weight: bold;
+    margin-right: 8px;
+  }
+ 
+  .terms-list-item a {
+    color: #1a73e8;
+    text-decoration: none;
+  }
+ 
+  .terms-list-item a:hover {
+    text-decoration: underline;
+  }

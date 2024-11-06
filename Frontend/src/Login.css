@@ -1,0 +1,656 @@
+/* Login-specific styles */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  /* max-width: 400px; */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ebcb78, #e78d71, #514dc2);
+  padding: 20px;
+}
+ 
+/* arrow */
+.login-container {
+  position: relative;
+  overflow: hidden;
+}
+ 
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  /* border-top: 15px solid #020000; */
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.3s ease;
+}
+ 
+.arrow-login {
+  transform: translateX(-50px) rotate(-45deg);
+}
+ 
+.arrow-signup {
+  transform: translateX(50px) rotate(45deg);
+}
+ 
+/* Other CSS rules */
+.checkbox {
+  display: none;
+}
+ 
+.login-container a:hover {
+  text-decoration: none;
+}
+ 
+.login-container .link {
+  color: #ffeba7;
+}
+ 
+.login-container .link:hover {
+  color: #c4c3ca;
+}
+ 
+.login-container p {
+  font-weight: 500;
+  font-size: 14px;
+}
+ 
+.login-container h4 {
+  font-weight: 600;
+}
+ 
+.login-container h6 span {
+  padding: 0 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+ 
+.login-container h6 span.active {
+  color: #fff;
+}
+ 
+.login-container .section {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  display: block;
+}
+.secttion .container{
+  background: linear-gradient(135deg, #ebcb78, #e78d71);
+}
+ 
+.login-container .full-height {
+  min-height: 100vh;
+}
+ 
+.login-container [type='checkbox']:checked,
+.login-container [type='checkbox']:not(:checked) {
+  display: none;
+}
+ 
+.login-container .checkbox:checked + label,
+.login-container .checkbox:not(:checked) + label {
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 60px;
+  height: 16px;
+  border-radius: 8px;
+  padding: 0;
+  margin: 10px auto;
+  cursor: pointer;
+  background-color: #ffeba7;
+}
+ 
+.login-container .checkbox:checked + label:before,
+.login-container .checkbox:not(:checked) + label:before {
+  position: absolute;
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #ffeba7;
+  background-color: #020305;
+  font-family: 'unicons';
+  content: '\eb4f';
+  z-index: 20;
+  top: -10px;
+  left: -10px;
+  line-height: 36px;
+  text-align: center;
+  font-size: 24px;
+  transition: all 0.5s ease;
+}
+ 
+.login-container .checkbox:checked + label:before {
+  transform: translateX(44px) rotate(-270deg);
+}
+ 
+.login-container .card-3d-wrap {
+  position: relative;
+  width: 440px;
+  max-width: 100%;
+  height: 500px;
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
+ 
+.login-container .card-3d-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 600ms ease-out;
+}
+ 
+.login-container .card-3d-wrapper.isSignUp {
+  transform: rotateY(180deg);
+}
+ 
+.login-container .card-front,
+.login-container .card-back {
+  width: 100%;
+  height: 600px;
+  background-color: #f7f7f7;
+  position: absolute;
+  border-radius: 6px;
+}
+ 
+.login-container .card-back {
+  transform: rotateY(180deg);
+}
+ 
+.login-container .center-wrap {
+ 
+  position: absolute;
+  width: 100%;
+  padding: 0 35px;
+  margin-top: 20px;
+  top: 50%;
+  left: 0;
+  transform: translate3d(0, -50%, 35px) perspective(100px);
+  z-index: 20;
+  display: block;
+}
+ 
+.login-container .form-group {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+ 
+.login-container .form-style {
+  padding: 13px 20px;
+  padding-left: 55px;
+  height: 48px;
+  width: 100%;
+  font-weight: 500;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  outline: none;
+  color: #130101;
+  background-color: #ffffff;
+  border: none;
+  transition: all 200ms linear;
+  box-shadow: 0 4px 8px 0 rgba(21, 21, 21, 0.2);
+}
+ 
+/* Placeholder styling */
+.login-container .form-style::placeholder {
+  color: #bbb; /* Lighter color for placeholder */
+  opacity: 1; /* Override default opacity */
+  font-weight: 500;
+  font-size: 14px;
+}
+ 
+/* Focus styles */
+.login-container .form-style:focus {
+  border: 2px solid #ffeba7; /* Add border color on focus */
+  box-shadow: 0 0 5px rgba(255, 235, 167, 0.5); /* Add shadow on focus */
+}
+ 
+.login-container .input-icon {
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 48px;
+  font-size: 24px;
+  line-height: 48px;
+  text-align: left;
+  transition: all 200ms linear;
+}
+.form-group .signup-phone-input
+{
+  color: #000;
+}
+ 
+/* Custom styles for the entire PhoneInput */
+.form-style {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 400px; /* Adjust width as needed */
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+}
+ 
+/* Style the input field */
+.form-style input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 16px;
+  color: #333;
+}
+ 
+/* Style for the flag dropdown */
+.form-style .flag-dropdown {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  padding: 2px 5px;
+}
+ 
+.form-style input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+ 
+.react-tel-input .flag-dropdown.open{
+  border: none;
+}
+ 
+/* Customize the main PhoneInput container */
+.react-tel-input {
+  width: 100%;
+  /* border: none; */
+  border-radius: 4px;
+  font-size: 500;
+  font-weight: 14px;
+  font-family: inherit;
+}
+ 
+/* Customize the input field within PhoneInput */
+.react-tel-input .form-control {
+  /* padding: 0.5rem; */
+  margin: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  /* color: #888; */
+  border: none;
+ 
+}
+ 
+/* Customize the dropdown flag section */
+.react-tel-input .flag-dropdown {
+  background-color: #f5f5f5;
+  border: none;
+  /* border-right: 1px solid #ccc; */
+}
+ 
+/* Adjust the placeholder style */
+.react-tel-input .form-control::placeholder {
+  color: #888;
+  font-style: italic;
+}
+ 
+ 
+ 
+/* Style placeholder text */
+.form-style input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+ 
+/* Enable hover effect */
+.form-style:hover {
+  border-color: #007bff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+ 
+/* Add custom search styles if the library allows it */
+.form-style .form-control.search {
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+.form-style-phone .input-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #007bff;
+}
+ 
+.form-style-phone input[type="tel"]::placeholder {
+  color: #aaa;
+}
+ 
+.react-tel-input .country-list .search{
+  margin-right: 20px;
+}
+ 
+ 
+.form-control:focus{
+  border: none;
+}
+ 
+.loading-style-btn {
+  color: #ffffff !important;
+  background-color:black !important; /* Optional - darkens button when loading */
+  cursor: not-allowed;
+  opacity: 0.7; /* Makes button look inactive */
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+.login-container .btn {
+  border-radius: 4px;
+  height: 44px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 200ms linear;
+  padding: 0 30px;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 5px;
+  background-color:#bf9dbf;
+  color: #000000;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+ 
+.login-container .btn:hover {
+  background-color: #000000;
+  color: #ffeba7;
+  box-shadow: 0 8px 24px 0 rgba(16, 39, 112, 0.2);
+}
+ 
+span{
+  color: black !important;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(9, 9, 9, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+ 
+.modal-content {
+  background-color: #faf2f2;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  max-width: 400px;
+  width: 90%;
+}
+ 
+.modal-content h4 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+ 
+.modal-content .form-group {
+  position: relative;
+  margin-bottom: 20px;
+  margin-right: 30px;
+}
+ 
+.modal-content .form-style {
+  width: 100%;
+  padding: 10px;
+  background: white;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #140202;
+  margin-left: 20px;
+}
+ 
+.modal-content .btn {
+  padding: 10px 20px;
+  background-color: #1e90ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+ 
+.modal-content .btn:hover {
+  background-color: #1c86ee;
+}
+ 
+.modal-content .input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1px;
+  color: #fff;
+}
+ 
+/* ================================================================================== */
+ 
+ 
+@keyframes animStar {
+  from {
+      transform: translateY(0);
+  }
+ 
+  to {
+      transform: translateY(-2000px);
+  }
+}
+ 
+/* Value.css */
+ 
+/* Star animation keyframes */
+@keyframes moveStars {
+  from {
+      transform: translateY(0);
+  }
+ 
+  to {
+      transform: translateY(-100vh);
+  }
+}
+ 
+/* Styling for stars */
+/* #stars, #stars2, #stars3 {
+width: 1px;
+height: 1px;
+background: white;
+position: absolute;
+top: 0;
+animation: moveStars 10s linear infinite;
+} */
+ 
+
+/* =========================================================================================== */
+/* Forgot Password Modal Styles */
+/* Forgot Password Modal Styles */
+.forgot-password-modal {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(9, 9, 9, 0.8);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000;
+}
+ 
+.modal-content {
+/* background-color: black; */
+padding: 30px;
+width: 400px;
+border-radius: 10px;
+position: relative;
+text-align: center;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+animation: slideIn 0.3s ease-out;
+}
+ 
+.modal-content h4 {
+margin-bottom: 20px;
+font-size: 24px;
+font-weight: 600;
+color: #333;
+}
+ 
+.forgot-password-content .form-group {
+margin-bottom: 20px;
+}
+ 
+.forgot-password-content .form-style {
+width: 100%;
+padding: 12px;
+border-radius: 8px;
+border: 1px solid #ddd;
+font-size: 16px;
+color: #333;
+}
+ 
+.forgot-password-content .form-style:focus {
+border-color: #007bff;
+outline: none;
+}
+ 
+.forgot-password-content .btn {
+background-color: #007bff;
+color: white;
+padding: 12px 20px;
+border-radius: 8px;
+cursor: pointer;
+border: none;
+font-size: 16px;
+margin-top: 10px;
+transition: background-color 0.3s ease;
+}
+ 
+.forgot-password-content .btn:hover {
+background-color: #0056b3;
+}
+ 
+.forgot-password-content .btn:focus {
+outline: none;
+}
+ 
+.forgot-password-content .btn.close {
+background-color: #ccc;
+color: #333;
+}
+ 
+.forgot-password-content .btn.close:hover {
+background-color: #aaa;
+}
+ 
+.forgot-password-close {
+position: absolute;
+top: 10px;
+right: 15px;
+font-size: 24px;
+color: #333;
+cursor: pointer;
+}
+ 
+.forgot-password-close:hover {
+color: #000;
+}
+ 
+@keyframes slideIn {
+from {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+ 
+ 
+/* Add this to your login.css file */
+ 
+.forgot-password-link {
+  color: #007bff; /* Default color */
+  cursor: pointer;
+  /* Adds underline to make it look clickable */
+}
+ 
+.forgot-password-link:hover {
+  color: #ff6347; /* Change color to a different shade, for example, tomato */
+  text-decoration: none; /* Remove underline on hover (optional) */
+}
+ 
+ 
+ 
+@media (max-width: 480px) {
+  .form-style {
+    padding: 3px; /* Adjust padding for mobile */
+    border-radius: 2px; /* Smaller border radius */
+  }
+ 
+  .form-style input {
+    padding: 8px; /* Smaller padding for input field */
+    font-size: 14px; /* Adjust font size */
+  }
+ 
+  .form-style .input-icon {
+    margin-left: 4px; /* Less margin for icon */
+    font-size: 18px; /* Adjust icon size if needed */
+  }
+ 
+  .react-tel-input .form-control{
+    margin: 0;
+    width:160px;
+    }
+ 
+  .login-container .card-back{
+    height: 600px;
+  }
+  .Toastify__toast-container {
+    width: 90% !important; /* Adjust width as needed */
+    left: 5% !important; /* Center it with some padding */
+    right: auto !important;
+  }
+ 
+  .Toastify__toast {
+    font-size: 14px; /* Adjust font size if needed */
+    padding: 10px; /* Reduce padding if you want a more compact toast */
+  }
+ 
+  .react-tel-input .country-list{
+    width: auto;
+  }
+}
+ 

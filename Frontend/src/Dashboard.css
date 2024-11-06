@@ -1,0 +1,252 @@
+.black-background {
+  display: flex;
+  width: 100%;
+  height: 100%; /* Full viewport height */
+}
+ 
+/* Sidebar styling */
+.dashboard-container {
+ 
+  display: flex;
+ 
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+ 
+.sidebar-dash {
+  width: 250px;
+  background: linear-gradient(35deg, #edab03, #ed5a2e, #706bf2);
+  color: #ffffff;
+  top: 0;
+  display: flex;
+ 
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+ 
+}
+ 
+.sidebar-header-dash {
+  text-align: center;
+  margin-bottom: 20px;
+ 
+  color: #ebcb78; /* Light yellow accent for header */
+}
+ 
+.logoImage-dash {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+ 
+.dash-head {
+  font-size: 1.2rem;
+  color: #fff;
+ 
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+ 
+/* Updated positioning for sidebar menu */
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  margin-top: 20px; /* Space from header */
+ 
+}
+ 
+ 
+ 
+.sidebar-menu li {
+  list-style: none;
+  padding: 15px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+ 
+.sidebar-menu li:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Hover effect */
+  border-radius: 8px;
+}
+.sidebar-menu li a
+{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #f4f4f9;
+}
+ 
+ 
+.sidebar-menu li .Logout-button {
+  color: #ff4b5c; /* Highlight the logout button */
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+ 
+.sidebar-menu li .Logout-button:hover {
+  background-color: #ff4b5c;
+  color: #ffffff;
+}
+ 
+ 
+ 
+.charts-container {
+  display: flex;
+  background: linear-gradient(290deg,#5383EC, #FE753F);
+ 
+flex-wrap: wrap;
+ 
+  padding: 20px;
+ 
+}
+ 
+.charts-part {
+  display: flex;
+margin: 0 30px;
+gap:20px  ;
+  width: 100%;
+}
+ 
+.chart-item {
+  width: 550px; /* Adjust chart width */
+  height: auto;
+  padding: 10px;
+  margin: 10px;
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+ 
+ 
+/* Additional styling for the first chart item */
+.chart-item.large {
+ 
+  color: #003366;
+  /* Optional: You can add additional styles for the large chart item if needed */
+}
+ 
+ 
+ 
+ 
+@media (max-width: 768px) {
+  /* Mobile view */
+ 
+  .sidebar-dash {
+    width: 100%;
+    flex: 1;
+ 
+  }
+  .sidebar-menu li {
+    padding: 8px;
+    font-size: 0.9rem;
+    margin: 50px 0;
+  }
+  .dashboard-container {
+    flex-direction: column;
+    height: auto;
+    display: flex;
+   
+  }
+  .charts-container {
+    padding: 10px;
+  }
+.charts-part
+{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-right: -20px;
+}
+  .chart-item {
+    width: 100%;
+    height: auto;
+  }
+  .sidebar-header-dash
+  {
+    margin-top: 50px;
+  }
+}
+ 
+ 
+/* Styles for screens below 950px */
+@media (max-width: 950px) {
+  .sidebar-dash {
+    width: 100%; /* Slightly narrower sidebar */
+    flex: 1;
+  }
+  .sidebar-menu li {
+    padding: 6px;
+    font-size: 1rem;
+    margin: 50px 0;
+  }
+  .dashboard-container {
+    flex-direction: column;
+    height: auto;
+    display: flex;
+  }
+  .charts-container {
+    padding: 8px;
+  }
+  .charts-part {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-right: -20px;
+  }
+  .chart-item {
+    width: 90%;
+    height: auto;
+  }
+  .sidebar-header-dash
+  {
+    margin-top: 80px;
+  }
+}
+ 
+/* Styles for screens below 450px */
+@media (max-width: 450px) {
+  .sidebar-dash {
+    width: 100%; /* Full width for sidebar */
+    flex: 1;
+   
+  }
+  .sidebar-header-dash
+  {
+    margin-top: 50px;
+  }
+  .sidebar-menu li {
+    padding: 4px;
+    font-size: 1;
+    margin: 50px 0;
+  }
+  .dashboard-container {
+    flex-direction: column !important;
+    height: auto;
+    display: flex;
+  }
+  .charts-container {
+    padding: 6px;
+   
+ 
+  }
+  .charts-part {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 200px;
+ 
+   
+  }
+  .chart-item {
+    width: 100%; /* Full width for each chart item */
+    height: auto;
+  }
+}
+ 

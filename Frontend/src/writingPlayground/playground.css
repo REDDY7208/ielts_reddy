@@ -1,0 +1,539 @@
+/* Playground Container */
+.playground-container {
+  background-color: #1976D2;
+  padding: 40px;
+  /* background-color: #f9f9f9; */
+ 
+  font-family: 'Arial', sans-serif;
+ 
+ 
+}
+ 
+/* Title Styling with Bubble Animation */
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff ; /* Unique color */
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  animation: bubbleAnimation 3s infinite;
+}
+ 
+/* Static Text (no scrolling) */
+.scrolling-text {
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  white-space: normal; /* This ensures text wraps if needed */
+}
+ 
+/* Bubble animation for the title */
+@keyframes bubbleAnimation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+ 
+/* Themes Section */
+.themes-section h3 {
+  font-size: 24px;
+  color: red !important;
+  text-align: center;
+  margin-bottom: 20px;
+}
+ 
+.themes-section {
+  text-align: center;
+  margin: 20px 0;
+}
+ 
+/* Reduced width for theme-button */
+/* Neumorphic Button Style with Bright Colors */
+.theme-button {
+  width: 150px; /* Set specific width */
+  padding: 10px 15px; /* Adjust padding as needed */
+  background-color: #ffcc00; /* Bright yellow background */
+  border: none;
+  border-radius: 10px; /* Rounder corners for a softer look */
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s, background-color 0.3s;
+ 
+  /* Neumorphism Shadows */
+  /* box-shadow: 8px 8px 15px rgba(255, 255, 255, 0.8), /* Light shadow */
+              /* -8px -8px 15px rgba(200, 250, 200, 0.4); Soft highlight shadow */
+}
+ 
+.theme-button:hover {
+  background-color: #ffbb00; /* Slightly darker yellow on hover */
+  color: white;
+  transform: translateY(-4px); /* Lift effect on hover */
+ 
+  /* Shadow on hover to enhance effect */
+  box-shadow: 5px 5px 10px rgba(200, 200, 200, 0.4),
+              -5px -5px 10px rgba(255, 255, 255, 0.7), /* Lighter shadow */
+              inset 5px 5px 8px rgba(255, 255, 255, 0.5), /* Inset shadow for depth */
+              inset -5px -5px 8px rgba(0, 0, 0, 0.1);
+}
+ 
+/* Optional: Focus effect for accessibility */
+.theme-button:focus {
+  outline: none; /* Remove default outline */
+  color: black;
+  /* box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.5); Outline effect on focus */
+}
+.theme-button:active{
+  background-color: #8BC34A;
+}
+ 
+ 
+/* Ripple Effect */
+.theme-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.6);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease;
+  border-radius: 50%;
+}
+ 
+.theme-button:focus::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+ 
+ 
+/* Words Section */
+.words-section h3 {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+ 
+.word-button {
+  background-color: #eee;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+ 
+.word-button:hover {
+  background-color: #3b5998;
+  color: white;
+  transform: scale(1.05);
+}
+ 
+.word-button.active {
+  background-color: #3b5998;
+  color: white;
+  transform: scale(1.1);
+}
+ 
+ 
+ 
+.input-section h3 {
+  font-size: 20px;
+  color: #3b5998;
+  font-weight: bold;
+}
+ 
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.input-field:hover {
+  border-color: #1976d2;
+  transform: scale(1.02);
+}
+ 
+.submit-button-play {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 10px;
+}
+ 
+.submit-button-play:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+ 
+/* Feedback Section */
+.feedback-section {
+  background: #fff3e0;
+  border: 1px solid #ff9800;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 15px;
+  width: 100%;
+  transition: transform 0.3s;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+ 
+.feedback-section h3 {
+  color: #3b5998;
+  font-weight: bold;
+}
+ 
+.feedback-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+/* Animation for h2 (Bounce Animation) */
+ .scrolling-text h2 {
+  font-size: 32px;
+  color: #3b5998;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: bounceAnimation 2s infinite;
+}
+ 
+@keyframes bounceAnimation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+ 
+/* Animation for h3 (Fade-In Animation) */
+.three-d-heading {
+  text-align: center;
+  font-size: 36px; /* Adjust size as needed */
+  color:#fff; /* Main color */
+  text-shadow:
+    0 0 5px rgba(231, 141, 113, 0.3), /* Inner glow */
+    0 0 10px rgba(231, 141, 113, 0.5), /* Outer glow */
+    0 0 15px rgba(231, 141, 113, 0.3);
+  font-weight: bold; /* Make the text bold */
+}
+ 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+ 
+/* Button with Hover Effect and Ripple Animation */
+.button-container {
+  display: flex;          /* Enable Flexbox */
+  flex-wrap: wrap;      /* Allow buttons to wrap onto the next line if needed */
+  gap: 10px;             /* Space between buttons (optional) */
+}
+ 
+.curved-heading {
+color: #000;
+font-weight: bold;
+ 
+text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px; /* Space below the heading */
+  padding-bottom: 15px; /* Space for the curve */
+}
+ 
+.curved-heading::before {
+  content: ""; /* Required for the pseudo-element */
+  position: absolute; /* Position relative to the heading */
+  left: 0; /* Align with the left of the heading */
+  bottom: 0; /* Position it right below the text */
+  width: 100%; /* Make it the same width as the heading */
+  height: 10px; /* Adjust the height for the curve */
+  background: rgb(81, 30, 30); /* Color of the underline */
+  border-radius: 50%; /* Create a curved effect */
+  transform: translateY(50%); /* Adjusts the position for better curvature */
+  z-index: -1;
+}
+ 
+ 
+ 
+.theme-button,
+.word-button {
+  background-color: #FE753F;
+  color: #fff ;
+  text-align: center;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative; /* Required for ripple effect */
+  overflow: hidden; /* Ensure the ripple doesn't go outside the button */
+  transition: transform 0.2s, background-color 0.3s;
+}
+ 
+.theme-button:hover,
+.word-button:hover {
+  background-color: #F7CE56;
+  color: #000;
+  transform: scale(1.0);
+}
+ 
+/* Ripple Animation */
+.theme-button::before,
+.word-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(248, 240, 240, 0.39);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease;
+  border-radius: 50%;
+}
+ 
+.theme-button:focus::before,
+.word-button:focus::before {
+  transform: translate(-50%, -50%) scale(1);
+ 
+}
+ 
+/* Active Button Styles */
+.theme-button.active,
+.word-button.active {
+  background-color: #3b5998;
+  color: white;
+  transform: scale(1.1);
+}
+.theme-button.active {
+  background-color: azure;
+  border: 2px solid #424242;/* Orange for active word */
+  color: #111111;
+  animation: activateButton 0.5s ease forwards;
+}
+ 
+/* Words Section */
+.words-section {
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: center; /* Center the buttons */
+  flex-wrap: wrap; /* Allow wrapping if buttons exceed container width */
+  margin: 20px 0;
+  padding: 10px; /* Add padding for spacing */
+  /* border: 1px solid #ccc; Optional border for better visibility */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background color */
+  transition: opacity 0.3s ease;
+}
+ 
+.words-section h3 {
+  width: 100%; /* Make the heading take full width */
+  text-align: center; /* Center the heading */
+  margin-bottom: 15px; /* Space below the heading */
+}
+ 
+.word-button {
+  background-color: #4caf50; /* Green */
+  color: white;
+  /* border: none; */
+  padding: 10px 15px;
+  margin: 15px; /* Margin between buttons */
+  /* border-radius: 5px; */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: auto; /* Allow the button to size based on content */
+  min-width: 80px; /* Set a minimum width for better appearance */
+}
+ 
+.word-button:hover {
+  background-color: #388e3c; /* Darker green on hover */
+  transform: scale(1.0); /* Slightly enlarge on hover */
+}
+ 
+.word-button.active {
+  background-color: #ff9800; /* Orange for active word */
+}
+/* Input Section */
+ 
+ 
+.input-section h3 {
+  text-align: center; /* Center the heading */
+  color: #333; /* Dark color for good contrast */
+  margin-bottom: 10px; /* Space below the heading */
+}
+ 
+.input-section p {
+  text-align: center; /* Center the definition text */
+  color: #555; /* Slightly lighter color for the definition */
+  margin-bottom: 15px; /* Space below the paragraph */
+}
+ 
+label {
+  display: block; /* Block display for better spacing */
+  margin-bottom: 10px; /* Space below the label */
+  font-weight: bold; /* Bold for emphasis */
+  color: #333; /* Dark color for contrast */
+}
+ 
+.input-field {
+  width: 100%; /* Full width for input field */
+  padding: 10px; /* Padding inside the input field */
+  margin-top: 5px; /* Space above the input */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  transition: border-color 0.3s ease; /* Smooth transition for focus */
+}
+ 
+.input-field:focus {
+  border-color: #4caf50; /* Green border on focus */
+  outline: none; /* Remove default outline */
+}
+ 
+.submit-button-play {
+  background: linear-gradient(135deg, #4caf50, #81c784); /* Gradient background */
+  color: white; /* White text color */
+  border: 2px solid transparent; /* Border for transition effect */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px 15px; /* Padding for the button */
+  text-align: center; /* Center text inside the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background 0.3s ease, transform 0.2s ease, border 0.3s ease; /* Smooth transitions */
+  width: 40%; /* Width of the button */
+  margin: 0 auto; /* Center the button */
+  position: relative; /* For pseudo-element positioning */
+  overflow: hidden; /* To contain pseudo-elements */
+}
+ 
+.submit-button-play::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent overlay */
+  transform: translateX(-50%) translateY(-100%); /* Start above the button */
+  transition: transform 0.3s ease; /* Smooth slide effect */
+}
+ 
+.submit-button-play:hover::after {
+  transform: translateX(-50%) translateY(0); /* Slide effect on hover */
+}
+ 
+.submit-button-play:hover {
+  transform: translateY(-5px); /* Lift effect */
+  border: 2px solid #ffffff; /* White border on hover */
+}
+ 
+ 
+.feedback-section {
+  margin-top: 20px; /* Space above the feedback section */
+  padding: 10px; /* Padding inside the feedback section */
+  background-color: #f9f9f9; /* Light background for feedback */
+  border-left: 5px solid #ff9800; /* Orange left border for emphasis */
+}
+ 
+.feedback-section h3 {
+  margin-top: 0; /* Remove margin above the heading */
+}
+ 
+.feedback-section p {
+  margin: 5px 0; /* Space between feedback lines */
+}
+ 
+.word-container {
+  display: flex;
+  gap: 20px; /* Adds space between the child elements */
+}
+ 
+.info, .input-section {
+  flex: 1; /* Both sections will take up equal space */
+}
+ 
+ 
+.info {
+  background-color: #fff; /* Set a light background for contrast */
+  padding: 20px; /* Add padding for spacing inside the container */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation on hover */
+}
+ 
+.info:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  background: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+ 
+.info p {
+  font-family: 'Arial', sans-serif; /* Customize the font */
+  font-size: 16px; /* Adjust the font size for readability */
+  color: #333; /* Darker color for contrast */
+  margin: 10px 0; /* Space between paragraphs */
+  animation: fadeIn 0.8s ease; /* Animation for text fade-in */
+  padding: 10px;
+}
+ 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px); /* Initial position slightly below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Move back to original position */
+  }
+}
+ 
+.word-container {
+  display: flex;
+  align-items: stretch; /* Ensures both children take the same height */
+  gap: 20px; /* Adds space between the sections */
+}
+ 
+.info, .input-section {
+  flex: 1; /* Makes both sections take up equal space */
+  background-color: #fff; /* Optional: background for visual clarity */
+  padding: 20px; /* Adds padding for spacing */
+  border-radius: 10px; /* Consistent rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Consistent shadow */
+}
+ 
+ 
+ 
+ 
+/* Optional: Add styles to make the layout responsive */
+@media (max-width: 768px) {
+  .word-container {
+    flex-direction: column; /* Stack the sections vertically on smaller screens */
+  }
+}
+ 
+@media (max-width: 480px) {
+  .word-container {
+    flex-direction: column; /* Stack the sections vertically on smaller screens */
+  }
+ 
+  .button-container{
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+ 

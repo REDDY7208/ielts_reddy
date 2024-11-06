@@ -1,0 +1,88 @@
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+  /* background: linear-gradient(135deg, #ebcb78, #e78d71); */
+/* Light gray background for contrast */
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+ 
+   }
+   .mock-back{
+    background:linear-gradient(135deg, #ebcb78, #e78d71) ;
+   }
+ 
+  .heading {
+    text-align: center;
+    color: #ed0909;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    animation: colorCycle 5s infinite;
+  }
+ 
+  @keyframes colorCycle {
+    0% { color: #ed5d09; }
+    50% { color: #093eed; }
+    100% { color: #ed0909; }
+  }
+ 
+  .button-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;/* Center the buttons */
+  }
+ 
+ 
+  .button-write {
+    padding: 25px 20px;
+    margin: 10px;
+    cursor: pointer;
+    background:  #7253A4;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    display: block;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+ 
+  .button-write:hover {
+    animation: pulse 1s infinite; /* Pulse effect */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background-color: #fff !important;
+  }
+ 
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+ 
+ 
+  .buttonTitle {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+ 
+   
+   
+  }
+ 
+ 
+  .btn-instruction {
+    margin: 5px 0;
+   color: #000;
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 3px;
+   
+  }
+   
+ 
